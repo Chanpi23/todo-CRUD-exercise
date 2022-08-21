@@ -1,9 +1,6 @@
 //npm install express mongoose ejs dotenv
 //npm install --save-dev nodemon
 
-//"start": "nodemon server.js"
-
-//Declare Variables
 //npm install express mongoose ejs dotenv
 //npm install --save-dev nodemon
 
@@ -14,13 +11,8 @@ const express = require("express");
 const app = express();
 const PORT = 8100;
 const mongoose = require("mongoose");
-const connectDB = require("./config/database");
-//const TodoTask = require("./models/TodoTask");
-const homeRoutes = require("./routes/home")
-const editRoutes = require("./routes/edit")
-require('dotenv').config({path: './config/.env'})
-
-connectDB()
+const TodoTask = require("./models/TodoTask");
+require('dotenv').config()
 
 //Set Middleware
 app.set("view engine", "ejs");
